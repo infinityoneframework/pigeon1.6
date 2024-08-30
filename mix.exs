@@ -1,7 +1,7 @@
 defmodule Pigeon.Mixfile do
   use Mix.Project
 
-  @version "1.6.1"
+  @version "1.7.1"
 
   def project do
     [

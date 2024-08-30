@@ -184,7 +184,8 @@ defimpl Pigeon.Configurable, for: Pigeon.FCM.Config do
         reason |> Macro.underscore() |> String.to_existing_atom()
 
       {:ok, response} ->
-        response["error"]
+        Logger.warn("error with no reason #{response["error"]}")
+        :unspecified_reason
 
       error ->
         "JSON parse failed: #{inspect(error)}, body: #{inspect(data)}"
